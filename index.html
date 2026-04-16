@@ -17,7 +17,7 @@
     integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href=" style.css">
-  
+
   <script src="javascript.js">
 
   </script>
@@ -28,7 +28,7 @@
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div>
       <a class="logo" href="#">
-        <img src="./images/logo.png" style="height: 100px;width: 200px;"></img>
+        <img src="./images/logo.png" style="height: 100px;width: 150px;"></img>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -79,11 +79,11 @@
                 <a class="dropdown-item" href="uttarkhand.html">Uttarakhand</a>
                 <a class="dropdown-item" href="jammu&kasmir.html">Jammu&Kashmir</a>
                 <h4>North-East</h4>
-                <a class="dropdown-item" href="#">Assam</a>
-                <a class="dropdown-item" href="#">Sikkiam</a>
-                <a class="dropdown-item" href="#">Nagaland</a>
-                <a class="dropdown-item" href="#">Manipur</a>
-                <a class="dropdown-item" href="#">Mizoram</a>
+                <a class="dropdown-item" href="assam.html">Assam</a>
+                <a class="dropdown-item" href="sikkim.html">Sikkiam</a>
+                <a class="dropdown-item" href="nagaland.html">Nagaland</a>
+                <a class="dropdown-item" href="manipur.html">Manipur</a>
+                <a class="dropdown-item" href="mizoram.html">Mizoram</a>
                 <a class="dropdown-item" href="#">Thipura</a>
                 <a class="dropdown-item" href="#">Meghalaya</a>
                 <a class="dropdown-item" href="#">Arunachal Pradesh</a>
@@ -154,9 +154,10 @@
         </li>
       </ul>
 
-      <input class="form-control " type="search" id="searchInput" placeholder="Search" aria-label="Search" onkeyup="searchfood()">
-      <button class="btn btn-outline-success" type="submit">Search</button>
-      
+      <input class="form-control " type="text" id="searchInput" placeholder="Search Here...." aria-label="Search"
+        onkeyup="searchFood(event)">
+      <button class="btn btn-outline-success" type="submit" onkeyup="searchFood()">Search</button>
+
       </input>
 
       <a class="login btn btn-warning " href="login.html" style="margin-right: 20px;"> Sign </a>
@@ -180,234 +181,231 @@
   </section>
 
 
-  <section class="home-food">
+  <section class="home-food" id="foodsection" style="background-color: darkgrey;">
     <h2 class="section-title">
       <span>Popular</span> Indian Foods
     </h2>
+    <div class="food-container">
+      <div class="food-grid">
 
-    <div class="food-grid">
+        <!-- Card 1 -->
+        <div class="food-card" data-link="#butter chicken">
+          <div class="food-img">
+            <img src="./images/punjab/Butter Chicken (Murgh Makhani).jpg" alt="Butter Chicken">
+          </div>
+          <div class="food-content">
+            <h3>Butter Chicken</h3>
+            <p>Punjab</p>
+            <button class="View">View Recipe</button>
+          </div>
+        </div>
 
-      <!-- Card 1 -->
-      <div class="food-card"onclick="goFood('dosa','Masala Dosa','Karnataka','₹120')">
-        <div class="food-img">
-          <img src="/images/punjab/Butter Chicken (Murgh Makhani).jpg" alt="Butter Chicken">
+        <!-- Card 2 -->
+        <div class="food-card" data-link="Hyderabadi biryani">
+          <div class="food-img">
+            <img src="./images/telangana/haleem.jpg" alt="haleem">
+          </div>
+          <div class="food-content">
+            <h3>Hyderabadi Biryani</h3>
+            <p>Telangana</p>
+            <button class="View">View Recipe</button>
+          </div>
         </div>
-        <div class="food-content">
-          <h3>Butter Chicken</h3>
-          <p>Punjab</p>
-          <button>View Recipe</button>
-        </div>
-      </div>
 
-      <!-- Card 2 -->
-      <div class="food-card">
-        <div class="food-img">
-          <img src="/images/telangana/haleem.jpg" alt="haleem">
+        <!-- Card 3 -->
+        <div class="food-card" data-link="#litti chokha">
+          <div class="food-img">
+            <img src="./images/bihar/Bihari Kebab.jpg" alt="Bihar Kebab">
+          </div>
+          <div class="food-content">
+            <h3>Litti Chokha</h3>
+            <p>Bihar</p>
+            <button class="View">View Recipe</button>
+          </div>
         </div>
-        <div class="food-content">
-          <h3>Hyderabadi Biryani</h3>
-          <p>Telangana</p>
-          <button>View Recipe</button>
-        </div>
-      </div>
 
-      <!-- Card 3 -->
-      <div class="food-card">
-        <div class="food-img">
-          <img src="/images/bihar/Bihari Kebab.jpg" alt="Bihar Kebab">
-        </div>
-        <div class="food-content">
-          <h3>Litti Chokha</h3>
-          <p>Bihar</p>
-          <button>View Recipe</button>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="food-card">
-        <div class="food-img">
-          <img src="/images/tamilnadu/dosa.jpg" alt="Dosa">
-        </div>
-        <div class="food-content">
-          <h3>Masala Dosa</h3>
-          <p>Tamil Nadu</p>
-          <button>View Recipe</button>
+        <!-- Card 4 -->
+        <div class="food-card" data-link="#dosa">
+          <div class="food-img">
+            <img src="./images/tamilnadu/dosa.jpg" alt="Dosa">
+          </div>
+          <div class="food-content">
+            <h3>Masala Dosa</h3>
+            <p>Tamil Nadu</p>
+            <button class="View">View Recipe</button>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="home-food">
+  <section class="home-food" style="background-color: darkgrey;">
     <div class="food-grid">
 
       <!-- Card 1 -->
       <div class="food-card">
         <div class="food-img">
-          <img src="/images/kerala/fish curry.webp" alt="Fish Curry">
+          <img src="./images/kerala/fish curry.webp" alt="Fish Curry">
         </div>
         <div class="food-content">
           <h3>Fish Curry</h3>
           <p>Kerala</p>
-          <button>View Recipe</button>
+          <button class="View">View Recipe</button>
         </div>
       </div>
 
       <!-- Card 2 -->
       <div class="food-card">
         <div class="food-img">
-          <img src="/images/karnataka/ragi mudde.webp" alt="Ragi mudde">
+          <img src="./images/karnataka/ragi mudde.webp" alt="Ragi mudde">
         </div>
         <div class="food-content">
           <h3>Ragi mudde</h3>
           <p>karnataka</p>
-          <button>View Recipe</button>
+          <button class="View">View Recipe</button>
         </div>
       </div>
 
       <!-- Card 3 -->
       <div class="food-card">
         <div class="food-img">
-          <img src="/images/andhra predesh/andhra meals.jpg" alt="Andhra meals">
+          <img src="./images/andhra predesh/andhra meals.jpg" alt="Andhra meals">
         </div>
         <div class="food-content">
           <h3>andhra meals</h3>
           <p>Andhra Predesh</p>
-          <button>View Recipe</button>
+          <button class="View">View Recipe</button>
         </div>
       </div>
 
       <!-- Card 4 -->
       <div class="food-card">
         <div class="food-img">
-          <img src="/images/goa/goan fish curry.jpg" alt="Goan fish curry">
+          <img src="./images/goa/goan fish curry.jpg" alt="Goan fish curry">
         </div>
         <div class="food-content">
           <h3>Goan fish curry</h3>
           <p>Goa</p>
-          <button>View Recipe</button>
+          <button class="View">View Recipe</button>
         </div>
       </div>
     </div>
 
   </section>
+  <section class="category-section" style="background-color: darkgrey;">
+    <h2 class="section-title">Food Categories</h2>
 
- 
-  <!-- food catagories -->
+    <div class="category-container">
+      <div class="category-card">
+        <img src="./images/ven pongal.jpg" alt="Veg Recipes">
+        <h4>Veg Recipes</h4>
+      </div>
 
-    <section class="category-section">
-      <h2 class="section-title">Food Categories</h2>
+      <div class="category-card" data-link="biryani.html">
+        <img src="./images/biriyani.avif" alt="Non-Veg Recipes">
+        <h4>Non-Veg Recipes</h4>
+      </div>
 
-      <div class="category-container">
-        <div class="category-card">
-          <img src="/images/ven pongal.jpg" alt="Veg Recipes">
-          <h4>Veg Recipes</h4>
-        </div>
+      <div class="category-card">
+        <img src="./images/Dal Baati Churma.jpg" alt="Street Food">
+        <h4>Street Food</h4>
+      </div>
 
-        <div class="category-card">
-          <img src="/images/biriyani.avif" alt="Non-Veg Recipes">
-          <h4>Non-Veg Recipes</h4>
-        </div>
+      <div class="category-card">
+        <img src="./images/uttarkhand/Bal Mithai.jpg" alt="Desserts">
+        <h4>Desserts</h4>
+      </div>
+    </div>
+  </section>
 
-        <div class="category-card">
-          <img src="/images/Dal Baati Churma.jpg" alt="Street Food">
-          <h4>Street Food</h4>
-        </div>
+  <!-- food blog -->
 
-        <div class="category-card">
-          <img src="/images/uttarkhand/Bal Mithai.jpg" alt="Desserts">
-          <h4>Desserts</h4>
+  <section class="blog-section" style="background-color: darkgrey;">
+    <h2 class="section-title">Latest Food Blogs</h2>
+
+    <div class="blog-container">
+      <div class="blog-card">
+        <img src="./images/biriyani.avif" alt="Biryani Tips">
+        <div class="blog-content">
+          <h4>Perfect Biryani Cooking Tips</h4>
+          <p>Learn the secrets of cooking flavorful and aromatic biryani.</p>
+          <a href="biriyani.html">Read More</a>
         </div>
       </div>
-    </section>
 
-    <!-- food blog -->
-
-    <section class="blog-section">
-      <h2 class="section-title">Latest Food Blogs</h2>
-
-      <div class="blog-container">
-        <div class="blog-card">
-          <img src="/images/biriyani.avif" alt="Biryani Tips">
-          <div class="blog-content">
-            <h4>Perfect Biryani Cooking Tips</h4>
-            <p>Learn the secrets of cooking flavorful and aromatic biryani.</p>
-            <a href="biriyani.html">Read More</a>
-          </div>
-        </div>
-
-        <div class="blog-card">
-          <img src="/images/Dal Baati Churma.jpg" alt="Indian Spices">
-          <div class="blog-content">
-            <h4>Indian Spices Guide</h4>
-            <p>Know the essential spices that make Indian food special.</p>
-            <a href="idli.html">Read More</a>
-          </div>
-        </div>
-
-        <div class="blog-card">
-          <img src="/images/ven pongal.jpg" alt="Healthy Food">
-          <div class="blog-content">
-            <h4>Healthy Indian Meals</h4>
-            <p>Delicious and healthy meals for daily lifestyle.</p>
-            <a href="venpongal.html">Read More</a>
-          </div>
+      <div class="blog-card">
+        <img src="./images/Dal Baati Churma.jpg" alt="Indian Spices">
+        <div class="blog-content">
+          <h4>Indian Spices Guide</h4>
+          <p>Know the essential spices that make Indian food special.</p>
+          <a href="idli.html">Read More</a>
         </div>
       </div>
-    </section>
+
+      <div class="blog-card">
+        <img src="./images/ven pongal.jpg" alt="Healthy Food">
+        <div class="blog-content">
+          <h4>Healthy Indian Meals</h4>
+          <p>Delicious and healthy meals for daily lifestyle.</p>
+          <a href="venpongal.html">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
-    <footer class="food-footer">
-      <div class="container">
-        <div class="row">
+  <footer class="food-footer">
+    <div class="container">
+      <div class="row">
 
-          <!-- Website Info -->
-          <div class="col-md-4 mb-4">
-            <h4 class="footer-title">Taste Of India</h4>
-            <p class="footer-text">
-              Discover famous and traditional foods from every Indian state.
-              One country, many flavors.
-            </p>
-          </div>
-
-          <!-- Food Categories -->
-          <div class="col-md-2 col-6 mb-4">
-            <h4 class="footer-title">Categories</h4>
-            <ul class="footer-links">
-              <li><a href="#">South Indian</a></li>
-              <li><a href="#">North Indian</a></li>
-              <li><a href="#">Street Food</a></li>
-              <li><a href="#">Desserts</a></li>
-            </ul>
-          </div>
-
-          <!-- Support -->
-          <div class="col-md-3 col-6 mb-4">
-            <h4 class="footer-title">Support</h4>
-            <ul class="footer-links">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms & Conditions</a></li>
-            </ul>
-          </div>
-
-          <!-- Contact -->
-          <div class="col-md-3 mb-4">
-            <h4 class="footer-title">Contact Us</h4>
-            <p class="footer-text">Email: myfoodweb@gmail.com</p>
-            <p class="footer-text">Phone: +91 90000 00000</p>
-            <p class="footer-text">Location: India</p>
-          </div>
-
+        <!-- Website Info -->
+        <div class="col-md-4 mb-4">
+          <h4 class="footer-title">Taste Of India</h4>
+          <p class="footer-text">
+            Discover famous and traditional foods from every Indian state.
+            One country, many flavors.
+          </p>
         </div>
 
-        <div class="footer-bottom text-center mt-3">
-          <p>© 2025 Taste Of India | All Rights Reserved</p>
+        <!-- Food Categories -->
+        <div class="col-md-2 col-6 mb-4">
+          <h4 class="footer-title">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="#">South Indian</a></li>
+            <li><a href="#">North Indian</a></li>
+            <li><a href="#">Street Food</a></li>
+            <li><a href="#">Desserts</a></li>
+          </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="col-md-3 col-6 mb-4">
+          <h4 class="footer-title">Support</h4>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-md-3 mb-4">
+          <h4 class="footer-title">Contact Us</h4>
+          <p class="footer-text">Email: myfoodweb@gmail.com</p>
+          <p class="footer-text">Phone: +91 90000 00000</p>
+          <p class="footer-text">Location: India</p>
         </div>
 
       </div>
-    </footer>
+
+      <div class="footer-bottom text-center mt-3">
+        <p>© 2025 Taste Of India | All Rights Reserved</p>
+      </div>
+
+    </div>
+  </footer>
 
 
 </body>

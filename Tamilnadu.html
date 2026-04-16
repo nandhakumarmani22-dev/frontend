@@ -21,6 +21,7 @@
     integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="javascript.js">
 
 </head>
 
@@ -71,18 +72,18 @@
               </div>
               <div class="col-md-6">
                 <h4>North</h4>
-                <a class="dropdown-item" href="#">Uttar Pradesh</a>
-                <a class="dropdown-item" href="#">Punjab</a>
-                <a class="dropdown-item" href="#">Haryana</a>
-                <a class="dropdown-item" href="#">Himachal Pradesh</a>
-                <a class="dropdown-item" href="#">Uttarakhand</a>
-                <a class="dropdown-item" href="#">Jammu&Kashmir</a>
+                <a class="dropdown-item" href="uttarkhand.html">Uttar Pradesh</a>
+                <a class="dropdown-item" href="punjab.html">Punjab</a>
+                <a class="dropdown-item" href="haryana.html">Haryana</a>
+                <a class="dropdown-item" href="himachal predesh.html">Himachal Pradesh</a>
+                <a class="dropdown-item" href="uttarkhand.html">Uttarakhand</a>
+                <a class="dropdown-item" href="jammu&kasmir.html">Jammu&Kashmir</a>
                 <h4>North-East</h4>
-                <a class="dropdown-item" href="#">Assam</a>
-                <a class="dropdown-item" href="#">Sikkiam</a>
-                <a class="dropdown-item" href="#">Nagaland</a>
-                <a class="dropdown-item" href="#">Manipur</a>
-                <a class="dropdown-item" href="#">Mizoram</a>
+                <a class="dropdown-item" href="assam.html">Assam</a>
+                <a class="dropdown-item" href="sikkim.html">Sikkiam</a>
+                <a class="dropdown-item" href="nagaland.html">Nagaland</a>
+                <a class="dropdown-item" href="manipur.html">Manipur</a>
+                <a class="dropdown-item" href="mizoram.html">Mizoram</a>
                 <a class="dropdown-item" href="#">Thipura</a>
                 <a class="dropdown-item" href="#">Meghalaya</a>
                 <a class="dropdown-item" href="#">Arunachal Pradesh</a>
@@ -153,8 +154,9 @@
         </li>
       </ul>
 
-      <input class="form-control " type="search" placeholder="Search" aria-label="Search"></input>
-      <button class="btn btn-outline-success" type="submit">Search</button>
+      <input class="form-control " type="search" id="searchInput" placeholder="Search food....." aria-label="Search"
+        onkeyup="searchFood()">
+      <button class="btn btn-outline-success" type="submit" onkeyup="searchFood()">Search</button>
 
 
       <a class="login btn btn-warning " href="login.html">Login</a>
@@ -184,39 +186,39 @@
     <!-- ROW 1 -->
     <div class="row">
 
-      <div class="col-md-4 mb-4">
+      <div class="col-md-4" data-link="#dosa">
         <div class="food-box">
           <img src="./images/tamilnadu/dosa.jpg" alt="Dosa">
           <div class="food-info">
             <h5>Dosa</h5>
-            <p class="desc">Crispy rice crepe served with chutney & sambar</p>
+            <p class="desc" id="noResult">Crispy rice crepe served with chutney & sambar</p>
 
-           <div class="order">
-                                <span class="price">₹20</span>
-                                <button class="order-btn"onclick="orderFood('Dosa',20)">Order</button>
-                            </div>
+            <div class="order">
+              <span class="price">₹20</span>
+              <button class="order-btn" onclick="orderFood('Dosa',20)">Order</button>
+            </div>
 
           </div>
         </div>
       </div>
 
-      <div class="col-md-4 mb-4">
+      <div class="col-md-4 mb-4" data-link="#idli">
         <div class="food-box">
           <img src="./images/tamilnadu/idli.jpg" alt="Idli">
           <div class="food-info">
             <h5>Idli</h5>
             <p class="desc">Soft steamed rice cakes</p>
 
-           <div class="order">
-                                <span class="price">₹50</span>
-                                <button class="order-btn"onclick="orderFood('Idali',50)">Order</button>
-                            </div>
+            <div class="order">
+              <span class="price">₹50</span>
+              <button class="order-btn" onclick="orderFood('Idli',50)">Order</button>
+            </div>
 
           </div>
         </div>
       </div>
 
-      <div class="col-md-4 mb-4">
+      <div class="col-md-4 mb-4" data-link="sambar">
         <div class="food-box">
           <img src="./images/tamilnadu/sambar.jpg" alt="Sambar">
           <div class="food-info">
@@ -224,9 +226,9 @@
             <p class="desc">Traditional lentil vegetable curry</p>
 
             <div class="order">
-                                <span class="price">₹10</span>
-                                <button class="order-btn"onclick="orderFood('Sambar',10)">Order</button>
-                            </div>
+              <span class="price">₹10</span>
+              <button class="order-btn" onclick="orderFood('Sambar',10)">Order</button>
+            </div>
 
           </div>
         </div>
@@ -237,7 +239,7 @@
     <!-- ROW 2 -->
     <div class="row">
 
-      <div class="col-md-4 mb-4">
+      <div class="col-md-4 mb-4" data-link="#upma">
         <div class="food-box">
           <img src="./images/tamilnadu/upma.webp" alt="Upma">
           <div class="food-info">
@@ -245,31 +247,31 @@
             <p class="desc">South Indian semolina breakfast</p>
 
             <div class="order">
-                                <span class="price">₹70</span>
-                                <button class="order-btn"onclick="orderFood('Upma',70)">Order</button>
-                            </div>
+              <span class="price">₹70</span>
+              <button class="order-btn" onclick="orderFood('Upma',70)">Order</button>
+            </div>
 
           </div>
         </div>
       </div>
 
-      <div class="col-md-4 mb-4">
+      <div class="col-md-4 mb-4" data-link="#vada">
         <div class="food-box">
           <img src="./images/tamilnadu/vada.webp" alt="Vada">
           <div class="food-info">
             <h5>Vada</h5>
             <p class="desc">Crispy fried lentil snack</p>
 
-           <div class="order">
-                                <span class="price">₹60</span>
-                                <button class="order-btn"onclick="orderFood('Vada',60)">Order</button>
-                            </div>
+            <div class="order">
+              <span class="price">₹60</span>
+              <button class="order-btn" onclick="orderFood('Vada',60)">Order</button>
+            </div>
 
           </div>
         </div>
       </div>
 
-      <div class="col-md-4 mb-4">
+      <div class="col-md-4 mb-4" data-link="#masala vada">
         <div class="food-box">
           <img src="./images/tamilnadu/masala vada.webp" alt="Masala Vada">
           <div class="food-info">
@@ -277,12 +279,46 @@
             <p class="desc">Spiced chana dal fritters</p>
 
             <div class="order">
-                                <span class="price">₹65</span>
-                                <button class="order-btn"onclick="orderFood('Masala Vada',65)">Order</button>
-                            </div>
+              <span class="price">₹65</span>
+              <button class="order-btn" onclick="orderFood('Masala Vada',65)">Order</button>
+            </div>
           </div>
         </div>
       </div>
+
+    </div>
+  </div>
+
+  <!-- ORDER FORM -->
+  <div id="orderForm" class="order-form-container">
+
+    <div class="order-form-box">
+
+      <h3>Food Order</h3>
+
+      <form onsubmit="submitOrder(event)">
+
+        <label>Food Name</label>
+        <input type="text" id="foodName" readonly>
+
+        <label>Price</label>
+        <input type="text" id="foodPrice" readonly>
+
+        <label>Customer Name</label>
+        <input type="text" id="customerName" required>
+
+        <label>Mobile Number</label>
+        <input type="tel" id="mobileNumber" required>
+
+        <label>Delivery Address</label>
+        <textarea id="address" required></textarea>
+
+        <br>
+
+        <button type="submit" class="btn btn-success">Place Order</button>
+        <button type="button" class="btn btn-danger" onclick="closeForm()">Cancel</button>
+
+      </form>
 
     </div>
   </div>
@@ -339,7 +375,7 @@
 
     </div>
   </footer>
-
+  <script src="javascript.js"></script>
 </body>
 
 </html>

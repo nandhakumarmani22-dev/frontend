@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sikkim Famous Foods</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CDN -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+    integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="javascript.js">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light justify-content-space-between d-flex fixed-top">
+    <div>
+      <a class="logo" href="#">
+        <img src="./images/logo.png" style="height: 100px;width: 200px;"></img>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gallery.html">Gallery</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            States
+          </a>
+
+          <div class="dropdown-menu p-3 fixed-top" aria-labelledby="navbarDropdown" style="width: 500px;">
+            <div class="row">
+              <div class="col-md-6">
+                <h4>South</h4>
+                <a class="dropdown-item" href="Tamilnadu.html">Tamil Nadu</a>
+                <a class="dropdown-item" href="Kerala.html">Kerala</a>
+                <a class="dropdown-item" href="karnataka.html">Karnataka</a>
+                <a class="dropdown-item" href="telangana.html">Telangana</a>
+                <a class="dropdown-item" href="andhra predesh.html">Andhra Pradesh</a>
+                <h4>West</h4>
+                <a class="dropdown-item" href="gujarat.html">Gujarat</a>
+                <a class="dropdown-item" href="goa.html">Goa</a>
+                <a class="dropdown-item" href="maharashtra.html">Maharashtra</a>
+                <a class="dropdown-item" href="rajasthan.html">Rajasthan</a>
+                <h4>East</h4>
+                <a class="dropdown-item" href="west bengal.html">West Bengal</a>
+                <a class="dropdown-item" href="odisha.html">Odisha</a>
+                <a class="dropdown-item" href="bihar.html">Bihar</a>
+                <a class="dropdown-item" href="jharkhand.html">Jharkhand</a>
+              </div>
+              <div class="col-md-6">
+                <h4>North</h4>
+                <a class="dropdown-item" href="uttar predesh.html">Uttar Pradesh</a>
+                <a class="dropdown-item" href="punjab.html">Punjab</a>
+                <a class="dropdown-item" href="haryana.html">Haryana</a>
+                <a class="dropdown-item" href="himachal predesh.html">Himachal Pradesh</a>
+                <a class="dropdown-item" href="uttarkhand.html">Uttarakhand</a>
+                <a class="dropdown-item" href="jammu&kasmir.html">Jammu&Kashmir</a>
+                <h4>North-East</h4>
+                <a class="dropdown-item" href="assam.html">Assam</a>
+                <a class="dropdown-item" href="sikkim.html">Sikkiam</a>
+                <a class="dropdown-item" href="nagaland.html">Nagaland</a>
+                <a class="dropdown-item" href="manipur.html">Manipur</a>
+                <a class="dropdown-item" href="mizoram.html">Mizoram</a>
+                <a class="dropdown-item" href="#">Thipura</a>
+                <a class="dropdown-item" href="#">Meghalaya</a>
+                <a class="dropdown-item" href="#">Arunachal Pradesh</a>
+              </div>
+
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="#popular" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            popular Foods
+          </a>
+          <div class="dropdown-menu" id="popular" style="width: 600px;">
+            <div class="row">
+              <div class="col-md-6">
+                <h4>South</h4>
+                <a class="dropdown-item" href="#">TN-Idli, Dosa, Sambar</a>
+                <a class="dropdown-item" href="#">Kl-Sadya, Appam & Stew</a>
+                <a class="dropdown-item" href="#">KA-Bisi Bele Bath</a>
+                <a class="dropdown-item" href="#">Tl-Hyderabadi Biryan</a>
+                <a class="dropdown-item" href="#">AP-Andhra Biryani, Gongura</a>
+                <h4>West</h4>
+                <a class="dropdown-item" href="#">Gj-Dhokla, Thepla</a>
+                <a class="dropdown-item" href="#">Ga-Fish Curry, Prawn Balchão</a>
+                <a class="dropdown-item" href="#">Vada Pav, Pav Bhaji</a>
+                <a class="dropdown-item" href="#">Rj-Dal Baati Churma,Gatte ki Sabzi</a>
+                <h4>East</h4>
+                <a class="dropdown-item" href="#">WB-Rosogolla</a>
+                <a class="dropdown-item" href="#">Od-Dalma, Pakhala Bhata</a>
+                <a class="dropdown-item" href="#">BH-Litti Chokha</a>
+                <a class="dropdown-item" href="#">Jk-Dhuska</a>
+              </div>
+              <div class="col-md-6">
+                <h4>North</h4>
+                <a class="dropdown-item" href="#">UP-Tunday Kebab,Bedmi Puri,Jalebi</a>
+                <a class="dropdown-item" href="#">P-Butter Chicken,Makki di Roti</a>
+                <a class="dropdown-item" href="#">H-Bajra Roti, Kadhi</a>
+                <a class="dropdown-item" href="#">HP-Dham</a>
+                <a class="dropdown-item" href="#">UK-Kafuli</a>
+                <a class="dropdown-item" href="#">Jk-Rogan Josh</a>
+                <h4>North-East</h4>
+                <a class="dropdown-item" href="#">As-Khar, Masor Tenga</a>
+                <a class="dropdown-item" href="#">Sk-Momos</a>
+                <a class="dropdown-item" href="#">Nl-Smoked Pork</a>
+                <a class="dropdown-item" href="#">MP-Eromba</a>
+                <a class="dropdown-item" href="#">MZ-Bai</a>
+                <a class="dropdown-item" href="#">TP-Mui Borok</a>
+                <a class="dropdown-item" href="#">MG-Jadoh</a>
+                <a class="dropdown-item" href="#">AP-Thukpa</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Contact
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="">📞 Call Us -+919876543210</a>
+            <a class="dropdown-item" href="">✉️ Email -info@example.com </a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+
+      <input class="form-control " type="search" id="searchInput" placeholder="Search food....." aria-label="Search" onkeyup="searchFood()">
+      <button class="btn btn-outline-success" type="submit" onkeyup="searchFood()">Search</button>
+
+
+      <a class="login btn btn-warning " href="login.html">Login</a>
+
+
+
+
+    </div>
+  </nav>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">Indian Food</a>
+  </nav>
+
+  <!-- Banner -->
+  <div class="skbanner">
+    <div class="overlay">
+      <h1>Sikkim Famous Foods</h1>
+    </div>
+  </div>
+
+  <!-- Food Section -->
+  <div class="container mt-4">
+    <h3 class="food-title">Sikkim Foods</h3>
+
+    <!-- ROW 1 -->
+    <div class="row">
+
+      <div class="col-md-4" data-link="#Chhurpi">
+        <div class="food-box" >
+          <img src="./images/sikkim/Chhurpi.jpg" alt="Chhurpi">
+          <div class="food-info">
+            <h5>Chhurpi</h5>
+            <p class="desc" id="noResult">Chhurpi is a traditional cheese made from yak or cow milk. It can be soft or very hard. Hard chhurpi is often chewed like a snack.</p>
+
+           <div class="order">
+                                <span class="price">₹200</span>
+                                <button class="order-btn"onclick="orderFood('Chhurpi',200)">Order</button>
+                            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4" data-link="#Gundruk">
+        <div class="food-box" >
+          <img src="./images/sikkim/Gundruk.jpg" alt="Gundruk">
+          <div class="food-info">
+            <h5>Gundruk</h5>
+            <p class="desc">Gundruk is a fermented leafy vegetable dish made from mustard or radish leaves. It can be eaten as soup or pickle and has a slightly sour taste.</p>
+
+           <div class="order">
+                                <span class="price">₹200</span>
+                                <button class="order-btn"onclick="orderFood('Gundruk',200)">Order</button>
+                            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4" data-link="#momos">
+        <div class="food-box">
+          <img src="./images/sikkim/momos.jpg" alt="momos">
+          <div class="food-info" >
+            <h5>momos</h5>
+            <p class="desc">They are steamed dumplings filled with vegetables, chicken, or pork. They are served with spicy tomato or chili chutney, making them very tasty.</p>
+
+            <div class="order">
+                                <span class="price">₹170</span>
+                                <button class="order-btn"onclick="orderFood('momos',170)">Order</button>
+                            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ROW 2 -->
+    <div class="row">
+
+      <div class="col-md-4 mb-4" data-link="#Phagshapa">
+        <div class="food-box">
+          <img src="./images/sikkim/Phagshapa.jpg" alt="Phagshapa">
+          <div class="food-info">
+            <h5>Phagshapa</h5>
+            <p class="desc">Phagshapa is a traditional pork dish cooked with radish and dried red chilies. It has a rich and spicy flavor and is commonly eaten with rice.</p>
+
+            <div class="order">
+                                <span class="price">₹250</span>
+                                <button class="order-btn"onclick="orderFood('Phagshapa',150)">Order</button>
+                            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4" data-link="#SelRotti">
+        <div class="food-box">
+          <img src="./images/sikkim/Sel Roti.jpg" alt="#SelRotti">
+          <div class="food-info" >
+            <h5>SelRotti</h5>
+            <p class="desc">Sel Roti is a ring-shaped fried bread made from rice flour. It is slightly sweet and usually prepared during festivals and special occasions.</p>
+
+           <div class="order">
+                                <span class="price">₹10</span>
+                                <button class="order-btn"onclick="orderFood('#SelRotti',15)">Order</button>
+                            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4" data-link="#Shaphaley">
+        <div class="food-box">
+          <img src="./images/sikkim/Sha Phaley.jpg" alt="#Shaphaley">
+          <div class="food-info" >
+            <h5>Shaphaley</h5>
+            <p class="desc">It is similar to a fried dumpling or stuffed bread and is often served with spicy chili sauce or soup.</p>
+
+            <div class="order">
+                                <span class="price">₹60</span>
+                                <button class="order-btn"onclick="orderFood('#Shaphaley',60)">Order</button>
+                            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+     
+    <!-- ROW 3 -->
+    <div class="row">
+
+
+      <div class="col-md-4 mb-4" data-link="#Sinki">
+        <div class="food-box">
+          <img src="./images/sikkim/Sinki.jpg" alt="Sinki">
+          <div class="food-info" >
+            <h5>Sinki</h5>
+            <p class="desc">sinki develops a strong aroma and slightly sour taste. It is commonly used to make soup, pickle, or curry and is usually eaten with rice or local meals.</p>
+
+            <div class="order">
+                                <span class="price">₹120</span>
+                                <button class="order-btn"onclick="orderFood('Sinki',120)">Order</button>
+                            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4" data-link="#Thukpa">
+        <div class="food-box">
+          <img src="./images/sikkim/thukpa.jpg" alt="Thukpa">
+          <div class="food-info" >
+            <h5>Thukpa</h5>
+            <p class="desc">Thukpa is a hot noodle soup that is very popular in Sikkim. It contains noodles, vegetables, meat, and flavorful broth. It is especially eaten during cold weather.</p>
+
+            <div class="order">
+                                <span class="price">₹199</span>
+                                <button class="order-btn"onclick="orderFood('thukpa',199)">Order</button>
+                            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="food-footer">
+    <div class="container">
+      <div class="row">
+
+        <!-- Website Info -->
+        <div class="col-md-4 mb-4">
+          <h4 class="footer-title">Taste Of India</h4>
+          <p class="footer-text">
+            Discover famous and traditional foods from every Indian state.
+            One country, many flavors.
+          </p>
+        </div>
+
+        <!-- Food Categories -->
+        <div class="col-md-2 col-6 mb-4">
+          <h4 class="footer-title">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="#">South Indian</a></li>
+            <li><a href="#">North Indian</a></li>
+            <li><a href="#">Street Food</a></li>
+            <li><a href="#">Desserts</a></li>
+          </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="col-md-3 col-6 mb-4">
+          <h4 class="footer-title">Support</h4>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-md-3 mb-4">
+          <h4 class="footer-title">Contact Us</h4>
+          <p class="footer-text">Email: myfoodweb@gmail.com</p>
+          <p class="footer-text">Phone: +91 90000 00000</p>
+          <p class="footer-text">Location: India</p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom text-center mt-3">
+        <p>© 2025 Taste Of India | All Rights Reserved</p>
+      </div>
+
+    </div>
+  </footer>
+<script src="javascript.js"></script>
+</body>
+
+</html>

@@ -1,10 +1,12 @@
-/*  */
+
 button {
-  margin-left: opx;
-  margin-right: 50px;
-
+  margin-left: 0px;
+  margin-right: 30px;
 }
-
+.View{
+  margin-left: 40px; 
+  margin-right: 30px;
+}
 input {
   width: 50px;
   height: auto;
@@ -41,82 +43,104 @@ a.logo {
   box-shadow: 4px 0px 4px 4px;
 }
 
-@media (max-width: 700px) { 
+/* ===============================
+   NAVBAR RESPONSIVE DESIGN
+================================= */
 
-  /* Logo resize */
-  .logo img {
-    height: 150px !important;
-    width: auto !important;
-  }
+@media (max-width: 992px) {
 
-  /* Navbar collapse background */
-  .navbar-collapse {
-    background: #fff;
-    padding: 15px;
-    margin-top: 10px;
-    border-radius: 10px;
-  }
+    /* Navbar background */
+    .navbar {
+        background-color: white !important;
+        padding: 10px;
+    }
 
-  /* Menu items full width */
-  .navbar-nav {
-    width: 100%;
-    text-align: left;
-  }
+    /* Logo resize */
+    .logo img {
+        height: 60px !important;
+        width: 90px !important;
+    }
 
-  .navbar-toggler {
-    outline: none;
-    margin-left: 250px;
-  }
+    /* Make nav links vertical */
+    .navbar-nav {
+        text-align: left;
+        margin-top: 10px;
+    }
 
-  .navbar-nav .nav-item {
-    margin-bottom: 8px;
-  }
+    .navbar-nav .nav-item {
+        margin-bottom: 8px;
+    }
 
-  /* Mega menu becomes normal dropdown */
-  .mega-menu {
-    position: static !important;
-    width: 100% !important;
-    transform: none !important;
-  }
+    /* Fix dropdown mega menu */
+    .mega-menu {
+        position: static !important;
+        width: 100% !important;
+        box-shadow: none;
+    }
 
-  .mega-menu .row {
-    flex-direction: column;
-  }
+    .mega-menu .row {
+        flex-direction: column;
+    }
 
-  .mega-menu .col-md-6 {
-    max-width: 100%;
-  }
+    .mega-menu .col-md-6 {
+        width: 100%;
+    }
 
-  /* Search bar */
-  .form-control {
-    width: 100%;
-    margin: 10px 0px;
+    /* Search box full width */
+    #searchInput {
+        width: 100% !important;
+        margin-top: 10px;
+    }
 
-  }
+    /* Search button full width */
+    .btn-outline-success {
+        width: 100%;
+        margin-top: 10px;
+    }
 
-  .btn-outline-success {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  /* Sign button */
-  .login {
-    width: 100%;
-    text-align: center;
-    margin: 10px 0;
-  }
+    /* Sign button full width */
+    .login {
+        width: 100%;
+        margin-top: 10px;
+    }
 }
+
+
+/* Extra Small Devices (Mobile <576px) */
+@media (max-width: 576px) {
+
+    .navbar {
+        padding: 5px;
+    }
+
+    .logo img {
+        height: 50px !important;
+        width: 80px !important;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+
+}
+
+
+
+
 
 /* banner */
 /* Hero Section */
 .hero-section {
   height: 100vh;
   width: 100%;
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.55),
-      rgba(0, 0, 0, 0.55)
-    ),
-    url("/images/vegetables-set-left-black-slate.jpg"); /* change image path */
+  background: linear-gradient(rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)),
+    url("./images/vegetables-set-left-black-slate.jpg");
+  /* change image path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -187,7 +211,7 @@ a.logo {
   background: #1A1A1A;
   color: #eee;
   padding: 50px 0 0px;
-  margin-top: 20px;
+  margin-top: 0px;
   margin-left: 0;
   margin-right: 0;
 }
@@ -352,7 +376,31 @@ a.logo {
   height: 55vh;
   position: relative;
 }
-/* goa */
+
+/* Assam */
+.asbanner {
+  background: url("./images/assam/landing\ page.jpg") center/cover no-repeat;
+  height: 55vh;
+  position: relative;
+}
+
+
+/* Sikkim */
+.skbanner {
+  background: url("./images/sikkim/sikkim\ landing\ page.jpg") center/cover no-repeat;
+  height: 55vh;
+  position: relative;
+}
+
+/* Nagaland */
+.nlbanner {
+  background: url("./images/nagaland/nagaland\ landing\ page.jpg") center/cover no-repeat;
+  height: 55vh;
+  position: relative;
+}
+
+
+
 /* about page */
 body {
   padding-top: 90px;
@@ -372,7 +420,14 @@ body {
   justify-content: center;
   align-items: center;
 }
+section h2 {
+    font-weight: bold;
+}
 
+section p {
+    font-size: 16px;
+    line-height: 1.7;
+}
 
 /* learn more! */
 .learn-more {
@@ -653,84 +708,99 @@ a.logo {
   color: #ff6a00;
 }
 
-/* Grid */
-.food-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  margin-top: 20px;
+
+/* SECTION */
+#section{
+  padding: 40px 20px;
+}
+.food-cantainer{
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* Card */
-.food-card {
-  background: #fff;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-  transition: 0.3s ease;
+.home-food{
+  padding:60px 8%;
 }
 
-.food-card:hover {
-  transform: translateY(-12px);
+.section-title{
+  text-align:center;
+  margin-bottom:40px;
+  font-size:28px;
 }
 
-/* Image */
-.food-img {
-  overflow: hidden;
+.section-title span{
+  color:#ff6b35;
 }
 
-.food-img img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  transition: 0.4s ease;
+/* GRID */
+.food-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+
 }
 
-.food-card:hover img {
-  transform: scale(1.1);
+/* CARD */
+.food-card{
+  background:#fff;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:0.4s;
 }
 
-/* Content */
-.food-content {
-  padding: 22px;
-  text-align: center;
+.food-card:hover{
+  transform:translateY(-10px);
 }
 
-.food-content h3 {
+.food-card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.food-content{
+  padding:20px;
+  text-align:center;
+}
+
+.food-content h3{
+  margin-bottom:5px;
   font-size: 20px;
-  margin-bottom: 6px;
 }
 
-.food-content p {
-  color: #666;
-  margin-bottom: 15px;
-  font-weight: 600;
+.food-content p{
+  color:#777;
+  font-size:14px;
+  margin-bottom:15px;
 }
 
-/* Button */
-.food-content button {
-  padding: 10px 22px;
-  border: none;
-  background: #ff6a00;
-  color: #fff;
-  border-radius: 25px;
-  font-size: 14px;
-  cursor: pointer;
-  transition: 0.3s;
+.food-content button{
+  background:#ff6b35;
+  border:none;
+  padding:8px 18px;
+  color:#fff;
+  border-radius:20px;
+  cursor:pointer;
 }
 
-.food-content button:hover {
-  background: #e55b00;
+.hide{
+  display:none;
 }
 
 
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
 
 /* food catagories */
 .category-section {
   padding: 0px 0px;
-  background: #fffaf4;
+  background-color: darkgrey;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 0px;
 }
 
 .category-container {
@@ -746,7 +816,7 @@ a.logo {
   overflow: hidden;
   cursor: pointer;
   transition: 0.3s;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 .category-card img {
@@ -782,7 +852,7 @@ a.logo {
   background: #fff;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
 }
 
@@ -823,7 +893,7 @@ a.logo {
 
 /* Media tag */
 
-@media (max-width: 700px) { 
+@media (max-width: 700px) {
 
   /* Logo resize */
   .logo img {
